@@ -1,3 +1,4 @@
+--hi skid
 local Cubits = game.Workspace["Client Cubits"]:GetChildren()
 local a = Instance.new("Folder", workspace)
 a.Name = "Cube"
