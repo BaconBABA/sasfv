@@ -637,7 +637,7 @@ explorer.TextColor3 = Color3.fromRGB(255, 255, 255)
 explorer.TextSize = 23.000
 explorer.MouseButton1Click:connect(function()
 	CreateGui = function()
-		loadstring(game:HttpGet(""))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/BaconBABA/sasfv/refs/heads/main/explorer.lua"))()
 	end)
 end)
 
