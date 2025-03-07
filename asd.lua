@@ -1,256 +1,120 @@
+-- Services
+local PhysicsService = game:GetService("PhysicsService")
+local PathfindingService = game:GetService("PathfindingService")
+local CollectionService = game:GetService("CollectionService")
+local RunService = game:GetService("RunService")
 
-return {[1]={surface={Top="Smooth";Front="Smooth";Bottom="Inlet";Right="Smooth";Left="Smooth";Back="Smooth";};
-reflectance=0;color={[1]=163.00000548362732;[2]=162.00000554323196;[3]=165.00000536441803;};
-anchored=false;mesh={offset={[1]=0;[2]=0;[3]=0;};
-meshtype=Enum.MeshType.Head;vertexcolor={[1]=1;[2]=1;[3]=1;};
-scale={[1]=1.25;[2]=1.25;[3]=1.25;};
-texture="";};
-cancollide=true;transparency=1;texture="Plastic";position={[1]=149.5565948486328;[2]=30.1430606842041;[3]=199.3937530517578;};
-locked=false;cframe={[1]=149.5565948486328;[2]=30.1430606842041;[3]=199.3937530517578;[4]=1;[5]=0;[6]=0;[7]=0;[8]=1;[9]=0;[10]=0;[11]=0;[12]=1;};
-shape="Block";size={[1]=2.8688437938690186;[2]=1.4344218969345093;[3]=1.4344218969345093;};
-};
-[2]={surface={Top="Studs";Front="Smooth";Bottom="Inlet";Right="Weld";Left="Weld";Back="Smooth";};
-reflectance=0;color={[1]=99.00000169873238;[2]=95.00000193715096;[3]=98.00000175833702;};
-anchored=false;cancollide=true;transparency=0;texture="Plastic";position={[1]=149.5565948486328;[2]=27.99142837524414;[3]=199.3937530517578;};
-locked=false;cframe={[1]=149.5565948486328;[2]=27.99142837524414;[3]=199.3937530517578;[4]=1;[5]=0;[6]=0;[7]=0;[8]=1;[9]=0;[10]=0;[11]=0;[12]=1;};
-shape="Block";size={[1]=2.8688437938690186;[2]=2.8688437938690186;[3]=1.4344218969345093;};
-};
-[3]={surface={Top="Studs";Front="Smooth";Bottom="Inlet";Right="Smooth";Left="Smooth";Back="Smooth";};
-reflectance=0;color={[1]=163.00000548362732;[2]=162.00000554323196;[3]=165.00000536441803;};
-anchored=false;cancollide=false;transparency=0;texture="Plastic";position={[1]=147.40496826171875;[2]=27.49974822998047;[3]=199.3937530517578;};
-locked=false;cframe={[1]=147.40496826171875;[2]=27.49974822998047;[3]=199.3937530517578;[4]=1;[5]=0;[6]=0;[7]=0;[8]=1;[9]=0;[10]=0;[11]=0;[12]=1;};
-shape="Block";size={[1]=1.4344218969345093;[2]=3.852202892303467;[3]=1.4344218969345093;};
-};
-[4]={surface={Top="Studs";Front="Smooth";Bottom="Inlet";Right="Smooth";Left="Smooth";Back="Smooth";};
-reflectance=0;color={[1]=163.00000548362732;[2]=162.00000554323196;[3]=165.00000536441803;};
-anchored=false;cancollide=false;transparency=0;texture="Plastic";position={[1]=151.70822143554688;[2]=27.487577438354492;[3]=199.3937530517578;};
-locked=false;cframe={[1]=151.70822143554688;[2]=27.487577438354492;[3]=199.3937530517578;[4]=1;[5]=0;[6]=0;[7]=0;[8]=1;[9]=0;[10]=0;[11]=0;[12]=1;};
-shape="Block";size={[1]=1.4344218969345093;[2]=3.87654709815979;[3]=1.4344218969345093;};
-};
-[5]={surface={Top="Studs";Front="Smooth";Bottom="Smooth";Right="Smooth";Left="Smooth";Back="Smooth";};
-reflectance=0;color={[1]=163.00000548362732;[2]=162.00000554323196;[3]=165.00000536441803;};
-anchored=false;cancollide=false;transparency=0;texture="Plastic";position={[1]=148.83938598632812;[2]=24.484882354736328;[3]=199.3937530517578;};
-locked=false;cframe={[1]=148.83938598632812;[2]=24.484882354736328;[3]=199.3937530517578;[4]=1;[5]=0;[6]=0;[7]=0;[8]=1;[9]=0;[10]=0;[11]=0;[12]=1;};
-shape="Block";size={[1]=1.4344218969345093;[2]=4.144250392913818;[3]=1.4344218969345093;};
-};
-[6]={surface={Top="Studs";Front="Smooth";Bottom="Smooth";Right="Smooth";Left="Smooth";Back="Smooth";};
-reflectance=0;color={[1]=163.00000548362732;[2]=162.00000554323196;[3]=165.00000536441803;};
-anchored=false;cancollide=false;transparency=0;texture="Plastic";position={[1]=150.2738037109375;[2]=24.462709426879883;[3]=199.3937530517578;};
-locked=false;cframe={[1]=150.2738037109375;[2]=24.462709426879883;[3]=199.3937530517578;[4]=1;[5]=0;[6]=0;[7]=0;[8]=1;[9]=0;[10]=0;[11]=0;[12]=1;};
-shape="Block";size={[1]=1.4344218969345093;[2]=4.188594818115234;[3]=1.4344218969345093;};
-};
-[7]={surface={Top="Smooth";Front="Smooth";Bottom="Smooth";Right="Smooth";Left="Smooth";Back="Smooth";};
-reflectance=0;color={[1]=163.00000548362732;[2]=162.00000554323196;[3]=165.00000536441803;};
-anchored=true;cancollide=false;transparency=1;texture="Plastic";position={[1]=149.5565948486328;[2]=27.99142837524414;[3]=199.3937530517578;};
-locked=false;cframe={[1]=149.5565948486328;[2]=27.99142837524414;[3]=199.3937530517578;[4]=1;[5]=0;[6]=0;[7]=0;[8]=1;[9]=0;[10]=0;[11]=0;[12]=1;};
-shape="Block";size={[1]=2.8688437938690186;[2]=2.8688437938690186;[3]=1.4344218969345093;};
-};
-[8]={surface={Top="Smooth";Front="Smooth";Bottom="Smooth";Right="Smooth";Left="Smooth";Back="Smooth";};
-reflectance=0;color={[1]=252.00000017881393;[2]=250.00000029802322;[3]=255;};
-anchored=false;cancollide=false;transparency=0.15000000596046448;texture="Neon";position={[1]=149.53575134277344;[2]=30.107450485229492;[3]=198.70849609375;};
-locked=false;cframe={[1]=149.53575134277344;[2]=30.107450485229492;[3]=198.70849609375;[4]=0;[5]=0;[6]=1;[7]=0;[8]=1;[9]=0;[10]=-1;[11]=0;[12]=0;};
-shape="Cylinder";size={[1]=0.6528626680374146;[2]=1.0881043672561646;[3]=1.0881043672561646;};
-};
-[9]={surface={Top="Smooth";Front="Smooth";Bottom="Smooth";Right="Smooth";Left="Smooth";Back="Smooth";};
-reflectance=0;color={[1]=163.00000548362732;[2]=162.00000554323196;[3]=165.00000536441803;};
-anchored=false;cancollide=false;transparency=1;texture="Plastic";position={[1]=149.5662841796875;[2]=30.35761260986328;[3]=199.381103515625;};
-locked=false;cframe={[1]=149.5662841796875;[2]=30.35761260986328;[3]=199.381103515625;[4]=1;[5]=0;[6]=0;[7]=0;[8]=1;[9]=0;[10]=0;[11]=0;[12]=1;};
-shape="Block";size={[1]=1.8499996662139893;[2]=1.7400000095367432;[3]=1.6399999856948853;};
-};
-[10]={surface={Top="Smooth";Front="Smooth";Bottom="Smooth";Right="Smooth";Left="Smooth";Back="Smooth";};
-reflectance=0;color={[1]=163.00000548362732;[2]=162.00000554323196;[3]=165.00000536441803;};
-anchored=false;cancollide=false;transparency=1;texture="Plastic";position={[1]=147.40130615234375;[2]=27.48841094970703;[3]=199.39608764648438;};
-locked=false;cframe={[1]=147.40130615234375;[2]=27.48841094970703;[3]=199.39608764648438;[4]=1;[5]=0;[6]=0;[7]=0;[8]=1;[9]=0;[10]=0;[11]=0;[12]=1;};
-shape="Block";size={[1]=1.5799999237060547;[2]=3.8999996185302734;[3]=1.6299999952316284;};
-};
-[11]={surface={Top="Smooth";Front="Smooth";Bottom="Smooth";Right="Smooth";Left="Smooth";Back="Smooth";};
-reflectance=0;color={[1]=163.00000548362732;[2]=162.00000554323196;[3]=165.00000536441803;};
-anchored=false;cancollide=false;transparency=1;texture="Plastic";position={[1]=148.83128356933594;[2]=24.31841278076172;[3]=199.381103515625;};
-locked=false;cframe={[1]=148.83128356933594;[2]=24.31841278076172;[3]=199.381103515625;[4]=1;[5]=0;[6]=0;[7]=0;[8]=1;[9]=0;[10]=0;[11]=0;[12]=1;};
-shape="Block";size={[1]=1.619999885559082;[2]=3.8999996185302734;[3]=1.6399999856948853;};
-};
-[12]={decal={transparency=0;face=Enum.NormalId.Front;texture="http://www.roblox.com/asset/?id=8381779262";};
-surface={Top="Smooth";Front="Smooth";Bottom="Smooth";Right="Smooth";Left="Smooth";Back="Smooth";};
-reflectance=0;color={[1]=255;[2]=187.00000405311584;[3]=28.000000230968;};
-anchored=false;cancollide=false;transparency=1;texture="Sandstone";position={[1]=152.99961853027344;[2]=28.527381896972656;[3]=199.93711853027344;};
-locked=false;cframe={[1]=152.99961853027344;[2]=28.527381896972656;[3]=199.93711853027344;[4]=-1;[5]=0;[6]=0;[7]=0;[8]=1;[9]=0;[10]=0;[11]=0;[12]=-1;};
-shape="Block";size={[1]=0.0946272611618042;[2]=0.49742892384529114;[3]=0.009074908681213856;};
-};
-[13]={decal={transparency=0;face=Enum.NormalId.Front;texture="http://www.roblox.com/asset/?id=8381797004";};
-surface={Top="Smooth";Front="Smooth";Bottom="Smooth";Right="Smooth";Left="Smooth";Back="Smooth";};
-reflectance=0;color={[1]=255;[2]=187.00000405311584;[3]=28.000000230968;};
-anchored=false;cancollide=false;transparency=1;texture="Sandstone";position={[1]=152.85635375976562;[2]=28.393508911132812;[3]=199.90969848632812;};
-locked=false;cframe={[1]=152.85635375976562;[2]=28.393508911132812;[3]=199.90969848632812;[4]=-0.5000002384185791;[5]=-0.8660253882408142;[6]=0;[7]=-0.8660253882408142;[8]=0.5000002384185791;[9]=0;[10]=0;[11]=0;[12]=-1;};
-shape="Block";size={[1]=0.15039555728435516;[2]=0.40326857566833496;[3]=0.014423183165490627;};
-};
-[14]={surface={Top="Smooth";Front="Smooth";Bottom="Smooth";Right="Smooth";Left="Smooth";Back="Smooth";};
-reflectance=0;color={[1]=171.00000500679016;[2]=168.0000051856041;[3]=158.00000578165054;};
-anchored=false;cancollide=false;transparency=0.800000011920929;texture="Ice";position={[1]=152.9922637939453;[2]=28.36665916442871;[3]=199.8634033203125;};
-locked=false;cframe={[1]=152.9922637939453;[2]=28.36665916442871;[3]=199.8634033203125;[4]=-1;[5]=0;[6]=0;[7]=0;[8]=0;[9]=1;[10]=0;[11]=1;[12]=0;};
-shape="Block";size={[1]=0.9794019460678101;[2]=0.09794018417596817;[3]=0.9794019460678101;};
-};
-[15]={decal={transparency=0;face=Enum.NormalId.Front;texture="http://www.roblox.com/asset/?id=8381779262";};
-surface={Top="Smooth";Front="Smooth";Bottom="Smooth";Right="Smooth";Left="Smooth";Back="Smooth";};
-reflectance=0;color={[1]=255;[2]=187.00000405311584;[3]=28.000000230968;};
-anchored=false;cancollide=false;transparency=1;texture="Sandstone";position={[1]=152.98495483398438;[2]=28.527381896972656;[3]=198.708251953125;};
-locked=false;cframe={[1]=152.98495483398438;[2]=28.527381896972656;[3]=198.708251953125;[4]=1;[5]=0;[6]=0;[7]=0;[8]=1;[9]=0;[10]=0;[11]=0;[12]=1;};
-shape="Block";size={[1]=0.0946272611618042;[2]=0.49742892384529114;[3]=0.009074908681213856;};
-};
-[16]={decal={transparency=0;face=Enum.NormalId.Front;texture="http://www.roblox.com/asset/?id=8381797004";};
-surface={Top="Smooth";Front="Smooth";Bottom="Smooth";Right="Smooth";Left="Smooth";Back="Smooth";};
-reflectance=0;color={[1]=255;[2]=187.00000405311584;[3]=28.000000230968;};
-anchored=false;cancollide=false;transparency=1;texture="Sandstone";position={[1]=153.12818908691406;[2]=28.393508911132812;[3]=198.73565673828125;};
-locked=false;cframe={[1]=153.12818908691406;[2]=28.393508911132812;[3]=198.73565673828125;[4]=0.4999999701976776;[5]=0.8660255074501038;[6]=0;[7]=-0.8660253882408142;[8]=0.49999991059303284;[9]=0;[10]=0;[11]=0;[12]=1;};
-shape="Block";size={[1]=0.15039555728435516;[2]=0.40326857566833496;[3]=0.014423183165490627;};
-};
-[17]={surface={Top="Smooth";Front="Smooth";Bottom="Smooth";Right="Smooth";Left="Smooth";Back="Smooth";};
-reflectance=0;color={[1]=171.00000500679016;[2]=168.0000051856041;[3]=158.00000578165054;};
-anchored=false;cancollide=false;transparency=0.800000011920929;texture="Ice";position={[1]=152.9922637939453;[2]=28.36665916442871;[3]=198.78196716308594;};
-locked=false;cframe={[1]=152.9922637939453;[2]=28.36665916442871;[3]=198.78196716308594;[4]=1;[5]=0;[6]=0;[7]=0;[8]=0;[9]=1;[10]=0;[11]=-1;[12]=0;};
-shape="Block";size={[1]=0.9794019460678101;[2]=0.09794018417596817;[3]=0.9794019460678101;};
-};
-[18]={decal={transparency=0;face=Enum.NormalId.Top;texture="http://www.roblox.com/asset/?id=89627839";};
-surface={Top="Smooth";Front="Smooth";Bottom="Smooth";Right="Smooth";Left="Smooth";Back="Smooth";};
-reflectance=0;color={[1]=171.00000500679016;[2]=168.0000051856041;[3]=158.00000578165054;};
-anchored=false;cancollide=false;transparency=0;texture="SmoothPlastic";position={[1]=152.9922637939453;[2]=28.36665916442871;[3]=198.78196716308594;};
-locked=false;cframe={[1]=152.9922637939453;[2]=28.36665916442871;[3]=198.78196716308594;[4]=1;[5]=0;[6]=0;[7]=0;[8]=0;[9]=1;[10]=0;[11]=-1;[12]=0;};
-shape="Block";size={[1]=0.9794019460678101;[2]=0.09794018417596817;[3]=0.9794019460678101;};
-};
-[19]={decal={transparency=0;face=Enum.NormalId.Top;texture="http://www.roblox.com/asset/?id=89627839";};
-surface={Top="Smooth";Front="Smooth";Bottom="Smooth";Right="Smooth";Left="Smooth";Back="Smooth";};
-reflectance=0;color={[1]=171.00000500679016;[2]=168.0000051856041;[3]=158.00000578165054;};
-anchored=false;cancollide=false;transparency=0;texture="SmoothPlastic";position={[1]=152.9922637939453;[2]=28.36665916442871;[3]=199.8634033203125;};
-locked=false;cframe={[1]=152.9922637939453;[2]=28.36665916442871;[3]=199.8634033203125;[4]=-1;[5]=0;[6]=0;[7]=0;[8]=0;[9]=1;[10]=0;[11]=1;[12]=0;};
-shape="Block";size={[1]=0.9794019460678101;[2]=0.09794018417596817;[3]=0.9794019460678101;};
-};
-[20]={surface={Top="Smooth";Front="Smooth";Bottom="Smooth";Right="Smooth";Left="Smooth";Back="Smooth";};
-reflectance=0;color={[1]=163.00000548362732;[2]=162.00000554323196;[3]=165.00000536441803;};
-anchored=false;cancollide=false;transparency=1;texture="Plastic";position={[1]=151.72128295898438;[2]=27.48841094970703;[3]=199.39608764648438;};
-locked=false;cframe={[1]=151.72128295898438;[2]=27.48841094970703;[3]=199.39608764648438;[4]=1;[5]=0;[6]=0;[7]=0;[8]=1;[9]=0;[10]=0;[11]=0;[12]=1;};
-shape="Block";size={[1]=1.5799999237060547;[2]=3.8999996185302734;[3]=1.6299999952316284;};
-};
-[21]={surface={Top="Smooth";Front="Smooth";Bottom="Smooth";Right="Smooth";Left="Smooth";Back="Smooth";};
-reflectance=0;color={[1]=163.00000548362732;[2]=162.00000554323196;[3]=165.00000536441803;};
-anchored=false;cancollide=false;transparency=1;texture="Plastic";position={[1]=150.2612762451172;[2]=24.31841278076172;[3]=199.381103515625;};
-locked=false;cframe={[1]=150.2612762451172;[2]=24.31841278076172;[3]=199.381103515625;[4]=1;[5]=0;[6]=0;[7]=0;[8]=1;[9]=0;[10]=0;[11]=0;[12]=1;};
-shape="Block";size={[1]=1.619999885559082;[2]=3.8999996185302734;[3]=1.6399999856948853;};
-};
-[22]={decal={transparency=0;face=Enum.NormalId.Front;texture="http://www.roblox.com/asset/?id=8381797004";};
-surface={Top="Smooth";Front="Smooth";Bottom="Smooth";Right="Smooth";Left="Smooth";Back="Smooth";};
-reflectance=0;color={[1]=255;[2]=187.00000405311584;[3]=28.000000230968;};
-anchored=false;cancollide=false;transparency=1;texture="Sandstone";position={[1]=149.81553649902344;[2]=32.59505844116211;[3]=200.41685485839844;};
-locked=false;cframe={[1]=149.81553649902344;[2]=32.59505844116211;[3]=200.41685485839844;[4]=0.4999999701976776;[5]=0.8660255074501038;[6]=0;[7]=-0.8660255074501038;[8]=0.4999999701976776;[9]=0;[10]=0;[11]=0;[12]=1;};
-shape="Block";size={[1]=0.1902313530445099;[2]=0.5100836753845215;[3]=0.01824350096285343;};
-};
-[23]={surface={Top="Smooth";Front="Smooth";Bottom="Smooth";Right="Smooth";Left="Smooth";Back="Smooth";};
-reflectance=0;color={[1]=255;[2]=213.00000250339508;[3]=43.00000123679638;};
-anchored=false;cancollide=false;transparency=0;texture="Metal";position={[1]=149.6499481201172;[2]=32.586299896240234;[3]=200.5456085205078;};
-locked=false;cframe={[1]=149.6499481201172;[2]=32.586299896240234;[3]=200.5456085205078;[4]=1;[5]=0;[6]=0;[7]=0;[8]=1;[9]=0;[10]=0;[11]=0;[12]=1;};
-shape="Block";size={[1]=1.6479487419128418;[2]=1.6999919414520264;[3]=0.14153337478637695;};
-};
-[24]={decal={transparency=0;face=Enum.NormalId.Front;texture="http://www.roblox.com/asset/?id=8381779262";};
-surface={Top="Smooth";Front="Smooth";Bottom="Smooth";Right="Smooth";Left="Smooth";Back="Smooth";};
-reflectance=0;color={[1]=255;[2]=187.00000405311584;[3]=28.000000230968;};
-anchored=false;cancollide=false;transparency=1;texture="Sandstone";position={[1]=149.6343536376953;[2]=32.76438903808594;[3]=200.38218688964844;};
-locked=false;cframe={[1]=149.6343536376953;[2]=32.76438903808594;[3]=200.38218688964844;[4]=1;[5]=0;[6]=0;[7]=0;[8]=1;[9]=0;[10]=0;[11]=0;[12]=1;};
-shape="Block";size={[1]=0.11969149857759476;[2]=0.6291846632957458;[3]=0.011478611268103123;};
-};
-[25]={surface={Top="Smooth";Front="Smooth";Bottom="Smooth";Right="Smooth";Left="Smooth";Back="Smooth";};
-reflectance=0;color={[1]=171.00000500679016;[2]=168.0000051856041;[3]=158.00000578165054;};
-anchored=false;cancollide=false;transparency=0.800000011920929;texture="Ice";position={[1]=149.6436004638672;[2]=32.56108093261719;[3]=200.47544860839844;};
-locked=false;cframe={[1]=149.6436004638672;[2]=32.56108093261719;[3]=200.47544860839844;[4]=1;[5]=0;[6]=0;[7]=0;[8]=0;[9]=1;[10]=0;[11]=-1;[12]=0;};
-shape="Block";size={[1]=1.2388193607330322;[2]=0.12388193607330322;[3]=1.2388193607330322;};
-};
-[26]={decal={transparency=0;face=Enum.NormalId.Top;texture="http://www.roblox.com/asset/?id=89627839";};
-surface={Top="Smooth";Front="Smooth";Bottom="Smooth";Right="Smooth";Left="Smooth";Back="Smooth";};
-reflectance=0;color={[1]=171.00000500679016;[2]=168.0000051856041;[3]=158.00000578165054;};
-anchored=false;cancollide=false;transparency=0;texture="SmoothPlastic";position={[1]=149.6436004638672;[2]=32.56108093261719;[3]=200.47544860839844;};
-locked=false;cframe={[1]=149.6436004638672;[2]=32.56108093261719;[3]=200.47544860839844;[4]=1;[5]=0;[6]=0;[7]=0;[8]=0;[9]=1;[10]=0;[11]=-1;[12]=0;};
-shape="Block";size={[1]=1.2388193607330322;[2]=0.12388193607330322;[3]=1.2388193607330322;};
-};
-[27]={surface={Top="Smooth";Front="Smooth";Bottom="Smooth";Right="Smooth";Left="Smooth";Back="Smooth";};
-reflectance=0;color={[1]=17.00000088661909;[2]=17.00000088661909;[3]=17.00000088661909;};
-anchored=false;cancollide=false;transparency=0;texture="Metal";position={[1]=149.7875213623047;[2]=28.439420700073242;[3]=198.35873413085938;};
-locked=false;cframe={[1]=149.7875213623047;[2]=28.439420700073242;[3]=198.35873413085938;[4]=0.8746203780174255;[5]=0;[6]=0.4848100244998932;[7]=-0.4848100244998932;[8]=0;[9]=0.8746203780174255;[10]=0;[11]=-1;[12]=0;};
-shape="Block";size={[1]=0.013738592155277729;[2]=0.020607884973287582;[3]=0.14425520598888397;};
-};
-[28]={decal={transparency=0;face=Enum.NormalId.Top;texture="http://www.roblox.com/asset/?id=89627839";};
-surface={Top="Studs";Front="Smooth";Bottom="Inlet";Right="Smooth";Left="Smooth";Back="Smooth";};
-reflectance=0;color={[1]=242.00000077486038;[2]=243.00000071525574;[3]=243.00000071525574;};
-anchored=false;cancollide=false;transparency=0;texture="Plastic";position={[1]=149.8271484375;[2]=28.511730194091797;[3]=198.3690643310547;};
-locked=false;cframe={[1]=149.8271484375;[2]=28.511730194091797;[3]=198.3690643310547;[4]=0.8746203780174255;[5]=0;[6]=0.4848100244998932;[7]=-0.4848100244998932;[8]=0;[9]=0.8746203780174255;[10]=0;[11]=-1;[12]=0;};
-shape="Block";size={[1]=0.41215771436691284;[2]=0.020607884973287582;[3]=0.41215771436691284;};
-};
-[29]={surface={Top="Smooth";Front="Smooth";Bottom="Smooth";Right="Smooth";Left="Smooth";Back="Smooth";};
-reflectance=0;color={[1]=17.00000088661909;[2]=17.00000088661909;[3]=17.00000088661909;};
-anchored=false;cancollide=false;transparency=0;texture="Metal";position={[1]=149.85704040527344;[2]=28.565818786621094;[3]=198.35873413085938;};
-locked=false;cframe={[1]=149.85704040527344;[2]=28.565818786621094;[3]=198.35873413085938;[4]=0.8746203780174255;[5]=0;[6]=0.4848100244998932;[7]=-0.4848100244998932;[8]=0;[9]=0.8746203780174255;[10]=0;[11]=-1;[12]=0;};
-shape="Block";size={[1]=0.012631678953766823;[2]=0.020607884973287582;[3]=0.10303942859172821;};
-};
-[30]={surface={Top="Studs";Front="Smooth";Bottom="Inlet";Right="Smooth";Left="Smooth";Back="Smooth";};
-reflectance=0;color={[1]=17.00000088661909;[2]=17.00000088661909;[3]=17.00000088661909;};
-anchored=false;cancollide=false;transparency=0;texture="Metal";position={[1]=149.8271026611328;[2]=28.511734008789062;[3]=198.35873413085938;};
-locked=false;cframe={[1]=149.8271026611328;[2]=28.511734008789062;[3]=198.35873413085938;[4]=0.8746203780174255;[5]=0;[6]=0.4848100244998932;[7]=-0.4848100244998932;[8]=0;[9]=0.8746203780174255;[10]=0;[11]=-1;[12]=0;};
-shape="Block";size={[1]=0.02060788683593273;[2]=0.020607884973287582;[3]=0.02060788683593273;};
-};
-[31]={surface={Top="Smooth";Front="Smooth";Bottom="Smooth";Right="Smooth";Left="Smooth";Back="Smooth";};
-reflectance=0;color={[1]=255;[2]=176.00000470876694;[3]=0;};
-anchored=false;cancollide=false;transparency=0;texture="Metal";position={[1]=147.70864868164062;[2]=30.298179626464844;[3]=199.46298217773438;};
-locked=false;cframe={[1]=147.70864868164062;[2]=30.298179626464844;[3]=199.46298217773438;[4]=1;[5]=0;[6]=0;[7]=0;[8]=1;[9]=0;[10]=0;[11]=0;[12]=1;};
-shape="Block";size={[1]=0.10040944069623947;[2]=1.4344218969345093;[3]=0.11475374549627304;};
-};
-[32]={surface={Top="Smooth";Front="Smooth";Bottom="Smooth";Right="Smooth";Left="Smooth";Back="Smooth";};
-reflectance=0;color={[1]=255;[2]=176.00000470876694;[3]=0;};
-anchored=false;cancollide=false;transparency=0;texture="Metal";position={[1]=148.05287170410156;[2]=30.298179626464844;[3]=199.46299743652344;};
-locked=false;cframe={[1]=148.05287170410156;[2]=30.298179626464844;[3]=199.46299743652344;[4]=1;[5]=0;[6]=0;[7]=0;[8]=1;[9]=0;[10]=0;[11]=0;[12]=1;};
-shape="Block";size={[1]=0.10040944069623947;[2]=1.4344218969345093;[3]=0.11475374549627304;};
-};
-[33]={surface={Top="Smooth";Front="Smooth";Bottom="Smooth";Right="Smooth";Left="Smooth";Back="Smooth";};
-reflectance=0.6499999761581421;color={[1]=255;[2]=176.00000470876694;[3]=0;};
-anchored=false;cancollide=false;transparency=0;texture="Sandstone";position={[1]=147.87969970703125;[2]=30.3857421875;[3]=199.32789611816406;};
-locked=false;cframe={[1]=147.87969970703125;[2]=30.3857421875;[3]=199.32789611816406;[4]=0;[5]=0;[6]=-1;[7]=0;[8]=-1;[9]=0;[10]=-1;[11]=0;[12]=0;};
-shape="Cylinder";size={[1]=0.12883280217647552;[2]=0.15938758850097656;[3]=0.1695365607738495;};
-};
-[34]={surface={Top="Smooth";Front="Smooth";Bottom="Smooth";Right="Smooth";Left="Smooth";Back="Smooth";};
-reflectance=0.6499999761581421;color={[1]=255;[2]=176.00000470876694;[3]=0;};
-anchored=false;cancollide=false;transparency=0;texture="Sandstone";position={[1]=147.87966918945312;[2]=30.38566780090332;[3]=199.50022888183594;};
-locked=false;cframe={[1]=147.87966918945312;[2]=30.38566780090332;[3]=199.50022888183594;[4]=0;[5]=0;[6]=-1;[7]=0;[8]=-1;[9]=0;[10]=-1;[11]=0;[12]=0;};
-shape="Cylinder";size={[1]=0.12883280217647552;[2]=0.15938758850097656;[3]=0.1695365607738495;};
-};
-[35]={surface={Top="Smooth";Front="Smooth";Bottom="Smooth";Right="Smooth";Left="Smooth";Back="Smooth";};
-reflectance=0;color={[1]=255;[2]=176.00000470876694;[3]=0;};
-anchored=false;cancollide=false;transparency=0;texture="Metal";position={[1]=151.09385681152344;[2]=30.298179626464844;[3]=199.46299743652344;};
-locked=false;cframe={[1]=151.09385681152344;[2]=30.298179626464844;[3]=199.46299743652344;[4]=1;[5]=0;[6]=0;[7]=0;[8]=1;[9]=0;[10]=0;[11]=0;[12]=1;};
-shape="Block";size={[1]=0.10040944069623947;[2]=1.4344218969345093;[3]=0.11475374549627304;};
-};
-[36]={surface={Top="Smooth";Front="Smooth";Bottom="Smooth";Right="Smooth";Left="Smooth";Back="Smooth";};
-reflectance=0;color={[1]=255;[2]=176.00000470876694;[3]=0;};
-anchored=false;cancollide=false;transparency=0;texture="Metal";position={[1]=151.43809509277344;[2]=30.298179626464844;[3]=199.46298217773438;};
-locked=false;cframe={[1]=151.43809509277344;[2]=30.298179626464844;[3]=199.46298217773438;[4]=1;[5]=0;[6]=0;[7]=0;[8]=1;[9]=0;[10]=0;[11]=0;[12]=1;};
-shape="Block";size={[1]=0.10040944069623947;[2]=1.4344218969345093;[3]=0.11475374549627304;};
-};
-[37]={surface={Top="Smooth";Front="Smooth";Bottom="Smooth";Right="Smooth";Left="Smooth";Back="Smooth";};
-reflectance=0.6499999761581421;color={[1]=255;[2]=176.00000470876694;[3]=0;};
-anchored=false;cancollide=false;transparency=0;texture="Sandstone";position={[1]=151.2649383544922;[2]=30.3857421875;[3]=199.32789611816406;};
-locked=false;cframe={[1]=151.2649383544922;[2]=30.3857421875;[3]=199.32789611816406;[4]=0;[5]=0;[6]=-1;[7]=0;[8]=-1;[9]=0;[10]=-1;[11]=0;[12]=0;};
-shape="Cylinder";size={[1]=0.12883280217647552;[2]=0.15938758850097656;[3]=0.1695365607738495;};
-};
-[38]={surface={Top="Smooth";Front="Smooth";Bottom="Smooth";Right="Smooth";Left="Smooth";Back="Smooth";};
-reflectance=0.6499999761581421;color={[1]=255;[2]=176.00000470876694;[3]=0;};
-anchored=false;cancollide=false;transparency=0;texture="Sandstone";position={[1]=151.26492309570312;[2]=30.38566780090332;[3]=199.50022888183594;};
-locked=false;cframe={[1]=151.26492309570312;[2]=30.38566780090332;[3]=199.50022888183594;[4]=0;[5]=0;[6]=-1;[7]=0;[8]=-1;[9]=0;[10]=-1;[11]=0;[12]=0;};
-shape="Cylinder";size={[1]=0.12883280217647552;[2]=0.15938758850097656;[3]=0.1695365607738495;};
-};
-[39]={surface={Top="Studs";Front="Smooth";Bottom="Inlet";Right="Weld";Left="Weld";Back="Smooth";};
-reflectance=0;color={[1]=13.000000175088644;[2]=105.00000134110451;[3]=172.00000494718552;};
-anchored=false;cancollide=true;transparency=1;texture="Plastic";position={[1]=149.62652587890625;[2]=28.176254272460938;[3]=197.431396484375;};
-locked=false;cframe={[1]=149.62652587890625;[2]=28.176254272460938;[3]=197.431396484375;[4]=1;[5]=0;[6]=-0.000011000012818840332;[7]=0;[8]=1;[9]=0;[10]=0.00001100001190934563;[11]=0;[12]=1;};
-shape="Block";size={[1]=0.646380603313446;[2]=0.646380603313446;[3]=0.323190301656723;};
-};
-[40]={surface={Top="Smooth";Front="Smooth";Bottom="Smooth";Right="Smooth";Left="Smooth";Back="Smooth";};
-reflectance=0;color={[1]=163.00000548362732;[2]=162.00000554323196;[3]=165.00000536441803;};
-anchored=false;cancollide=false;transparency=1;texture="Plastic";position={[1]=149.5662841796875;[2]=27.87779426574707;[3]=199.381103515625;};
-locked=false;cframe={[1]=149.5662841796875;[2]=27.87779426574707;[3]=199.381103515625;[4]=1;[5]=0;[6]=0;[7]=0;[8]=1;[9]=0;[10]=0;[11]=0;[12]=1;};
-shape="Block";size={[1]=3.049999713897705;[2]=3.2200000286102295;[3]=1.6399999856948853;};
-};
-}
+-- Constants
+local NPC_TAG = "NPC"  -- Tag for NPC models
+local WALL_TAG = "Wall"  -- Tag for wall parts
+local WAY_FOLDER = workspace:WaitForChild("Way")
+local NPC_COLLISION_GROUP = "NPC"
+
+-- Create the NPC collision group if it doesn't exist and set it so that NPC parts don't collide with each other
+pcall(function()
+    PhysicsService:CreateCollisionGroup(NPC_COLLISION_GROUP)
+end)
+PhysicsService:CollisionGroupSetCollidable(NPC_COLLISION_GROUP, NPC_COLLISION_GROUP, false)
+
+-- Function to assign a collision group to every BasePart in a model
+local function assignCollisionGroup(model, groupName)
+    for _, part in pairs(model:GetDescendants()) do
+        if part:IsA("BasePart") then
+            PhysicsService:SetPartCollisionGroup(part, groupName)
+        end
+    end
+end
+
+-- Wall check function using raycasting.
+-- This function casts a ray from startPos to endPos. If the ray hits any part tagged as "Wall", it returns false.
+local function isPathClear(startPos, endPos)
+    local direction = (endPos - startPos)
+    local raycastParams = RaycastParams.new()
+    raycastParams.FilterType = Enum.RaycastFilterType.Blacklist
+    -- Blacklist will ignore the NPC itself (caller can add its parts later if needed)
+    local result = workspace:Raycast(startPos, direction, raycastParams)
+    if result then
+        if CollectionService:HasTag(result.Instance, WALL_TAG) then
+            return false
+        end
+    end
+    return true
+end
+
+-- Main NPC control function – runs a movement loop for one NPC
+local function controlNPC(npc)
+    -- Make sure the model has a Humanoid and a PrimaryPart
+    if not npc:FindFirstChild("Humanoid") or not npc.PrimaryPart then
+        return
+    end
+    local humanoid = npc.Humanoid
+    assignCollisionGroup(npc, NPC_COLLISION_GROUP)
+    
+    while npc.Parent do
+        local waypoints = WAY_FOLDER:GetChildren()
+        if #waypoints == 0 then
+            warn("No waypoints found in the 'Way' folder!")
+            break
+        end
+
+        -- Choose a random waypoint
+        local randomWaypoint = waypoints[math.random(1, #waypoints)]
+        local startPos = npc.PrimaryPart.Position
+        local targetPos = randomWaypoint.Position
+
+        -- Check direct line-of-sight to the target (avoid walls)
+        if not isPathClear(startPos, targetPos) then
+            -- If blocked, wait and try again
+            wait(1)
+        else
+            -- Compute a path using PathfindingService
+            local path = PathfindingService:CreatePath({
+                AgentRadius = 2,
+                AgentHeight = 5,
+                AgentCanJump = true,
+                AgentWalkableTypes = {Enum.Material.Grass, Enum.Material.Concrete, Enum.Material.SmoothPlastic},
+            })
+            path:ComputeAsync(startPos, targetPos)
+            
+            if path.Status == Enum.PathStatus.Success then
+                local pathWaypoints = path:GetWaypoints()
+                for _, wp in ipairs(pathWaypoints) do
+                    local wpPos = wp.Position
+                    -- Check the segment to the waypoint is clear of walls
+                    if not isPathClear(npc.PrimaryPart.Position, wpPos) then
+                        warn("Path segment blocked by wall; recalculating path.")
+                        break
+                    end
+                    humanoid:MoveTo(wpPos)
+                    local reached = humanoid.MoveToFinished:Wait()
+                    if not reached then
+                        warn("Failed to reach waypoint; recalculating path.")
+                        break
+                    end
+                end
+            else
+                warn("Pathfinding failed with status: " .. tostring(path.Status))
+            end
+            wait(1)
+        end
+    end
+end
+
+-- Function to initialize and control all NPCs tagged with "NPC"
+local function setupNPCs()
+    for _, npc in pairs(CollectionService:GetTagged(NPC_TAG)) do
+        spawn(function()
+            controlNPC(npc)
+        end)
+    end
+end
+
+-- Initialize existing NPCs
+setupNPCs()
+
+-- Listen for any new NPCs added at runtime
+CollectionService:GetInstanceAddedSignal(NPC_TAG):Connect(function(npc)
+    spawn(function()
+        controlNPC(npc)
+    end)
+end)
